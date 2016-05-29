@@ -1,0 +1,41 @@
+
+close;
+
+minimo=0;
+maximo=20;
+delta=21;
+
+load("out_press_225p_v4_g5.txt");
+
+
+[n,m]=size(PP);
+
+xx=linspace(minimo,maximo,n);
+yy=linspace(minimo,maximo,m);
+contourf(xx,yy,PP);
+colorbar;
+set(colorbar,'fontsize',17);
+set(gca,'FontSize',17)
+
+hold on
+
+plot([19.4 19.4],[0 20],'k','LineWidth',2) 
+plot([18.8 18.8],[0 20],'k','LineWidth',2) 
+plot([18.21 18.21],[0 20],'k','LineWidth',2) 
+
+plot([15 20],[11.81 11.81],'k','LineWidth',2) 
+plot([15 20],[10.6 10.6],'k','LineWidth',2)
+plot([15 20],[9.41 9.41],'k','LineWidth',2) 
+plot([15 20],[8.2 8.2],'k','LineWidth',2)  
+
+
+xlabel('Position x (m)') % x-axis label
+ylabel('Position y (m)') % y-axis label
+axis([15 20 0 20])
+
+
+
+
+
+
+
